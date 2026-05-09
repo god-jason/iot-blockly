@@ -1,11 +1,14 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 import * as Blockly from 'blockly';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 
 @Component({
   selector: 'app-edit',
-  imports: [],
+  imports: [NzLayoutModule, NzMenuModule, NzIconModule],
   templateUrl: './edit.html',
   styleUrl: './edit.scss',
 })
@@ -13,7 +16,7 @@ export class Edit implements AfterViewInit {
 
   workspace!: Blockly.WorkspaceSvg;
 
-  @ViewChild('blockly', { static: true }) blocklyDiv!: ElementRef<HTMLDivElement>;
+  @ViewChild('blockly', { static: true }) blocklyDiv!: ElementRef;
 
   ngAfterViewInit(): void {
     this.workspace = Blockly.inject(this.blocklyDiv.nativeElement, {

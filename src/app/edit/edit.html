@@ -1,1 +1,52 @@
-<div #blockly class="blockly-container"></div>
+<nz-layout class="layout">
+    <nz-header>
+        <ul nz-menu nzMode="horizontal" nzTheme="dark" [nzSelectable]="false">
+            <li nz-submenu nzTitle="文件" nzIcon="file">
+                <ul>
+                    <li nz-menu-item>打开</li>
+                    <li nz-menu-item>保存</li>
+                    <li nz-menu-divider></li>
+                    <li nz-menu-item>导出Lua</li>
+                    <li nz-menu-item>导出JavaScript</li>
+                    <li nz-menu-divider></li>
+                    <li nz-menu-item>退出</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="编辑" nzIcon="edit">
+                <ul>
+                    <li nz-menu-item>撤销</li>
+                    <li nz-menu-item>重做</li>
+                    <li nz-menu-divider></li>
+                    <li nz-menu-item>剪切</li>
+                    <li nz-menu-item>复制</li>
+                    <li nz-menu-item>粘贴</li>
+                    <li nz-menu-divider></li>
+                    <li nz-menu-item>查找</li>
+                    <li nz-menu-item>替换</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="选择" nzIcon="menu">
+                <ul>
+                    <li nz-menu-item>全选</li>
+                    <li nz-menu-item>反选</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="视图" nzIcon="eye">
+                <ul>
+                    <li nz-menu-item>主题</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="关于" nzIcon="info-circle">
+                <ul>
+                    <li nz-menu-item>贡献人员名单</li>
+                </ul>
+            </li>
+        </ul>
+    </nz-header>
+    <nz-content>
+        <div #blockly class="blockly-container"></div>
+    </nz-content>
+    <nz-footer>
+        copyright benyi @ 2026
+    </nz-footer>
+</nz-layout>
